@@ -15,3 +15,23 @@ app.get('/', (req, res) => {
 app.get('/room1', (req, res) => {
   res.sendFile(__dirname +'/public/room1.html');
 });
+
+const stocks = io.of('stocks');
+
+stocks.on('connection', (socket) => {
+  socket.on('join', () => {
+    socket.join();
+    stocks.emit('message', `New user joined room 1!`);
+  });
+
+  socket.on('message', (msg) => {
+    console.log(`message: ${msg} `);
+    stocks.emit('message', msg);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('user disconected');
+
+    stocks.emit('message', 'user disconnected');
+  });
+});
