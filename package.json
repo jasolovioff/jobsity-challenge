@@ -1,0 +1,25 @@
+{
+  "name": "jobsity-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon ./index.js --unhandled-rejections=strict",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasolovioff/jobsity-challenge.git"
+  },
+  "author": "Jorge Alvarez Solovioff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasolovioff/jobsity-challenge/issues"
+  },
+  "homepage": "https://github.com/jasolovioff/jobsity-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "socket.io": "^2.3.0"
+  }
+}
