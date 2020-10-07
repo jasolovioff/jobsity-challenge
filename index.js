@@ -11,3 +11,7 @@ server.listen(PORT, () => {
 app.get('/', (req, res) => {
   res.sendFile(__dirname +'/public/index.html');
 });
+
+app.get('/room1', (req, res) => {
+  res.sendFile(__dirname +'/public/room1.html');
+});
